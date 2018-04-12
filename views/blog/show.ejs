@@ -1,0 +1,25 @@
+<% include ../partials/header %>
+<div class="container">
+    <div class="row">
+
+<h4> <%= blogpost.title %> </h4>
+<p>  <%= blogpost.content %> </p>
+        <p>Author: <%= blogpost.author.username %></p>
+<p>Posted: <%= blogpost.created.toTimeString() %> </p>
+
+<p><a class="btn btn-success" href="<%= blogpost._id %>/comments/new">Comment</a>
+</p>
+
+<% blogpost.comments.forEach(function(comment){ %>
+
+    <strong><%= comment.author.username %></strong>
+
+        <p><%= comment.text %></p>
+        <p><%= comment.created.toTimeString() %></p>
+
+
+<% }) %>
+        <a href="/blog">Back to posts</a>
+    </div></div>
+
+<% include ../partials/footer %>

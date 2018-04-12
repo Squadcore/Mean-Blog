@@ -1,0 +1,22 @@
+<% include ../partials/header %>
+<div class="container">
+    <div class="row">
+<h1 style="text-align:center;">Create a new post</h1>
+        <div style ="width:30%; margin:25px auto">
+        <form action="/blog" method="POST">
+<div class="form-group">
+    <input class="form-control" type="post[text]" name="title" placeholder="title">
+</div>
+            <div class="form-group">
+    <input class="form-control" type="post[text]" name ="content" placeholder="content">
+            </div>
+            <div class="form-group">
+    <button class="btn btn-large btn-primary btn-block">Submit!</button>
+            </div>
+
+</form>
+<a href="/blog">Back to posts</a>
+    </div>
+</div>
+</div>
+<% include ../partials/footer %>

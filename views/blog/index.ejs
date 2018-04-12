@@ -1,0 +1,23 @@
+<% include ../partials/header %>
+
+<div class="container">
+    <header class="jumbotron">
+        <div class="container">
+        <h1>Blogposts here!</h1>
+        <p>Read posts from all over the web</p>
+        <a class="btn btn-primary btn-lg" href="/blog/new">Add new post</a>
+        </div>
+    </header>
+
+<div class="row">
+    <% blogpost.forEach(function(blogpost){ %>
+    <div class="col-md-3 col-sm-6">
+        <h4> <%= blogpost.title %> </h4>
+        <p>  <%= blogpost.content %> </p>
+        <p><a href ="/blog/<%= blogpost._id %>" class="btn btn-primary">Read more</a></p>
+    </div>
+    <% }); %>
+</div>
+</div>
+
+<% include ../partials/footer %>
